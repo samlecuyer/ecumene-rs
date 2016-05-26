@@ -1,0 +1,16 @@
+--- # A map of los angeles in Lambert Conformal Conic
+name  : map of los angeles
+# srs   : +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m +no_defs
+srs   : +proj=lcc +lat_0=66 +lat_1=23 +lon_0=0 +k_0=1 +k_0=1.0
+extent: [-180., 85., 180., -60.]
+# srs   : +proj=ortho +ellps=WGS84 +lat_0=60 +lon_0=-129
+# extent: [-180., 90., -60., -30.]
+layers:
+  - name      : whole world land polygons
+    style     : roads
+    # temporary: we'll need to load the datasource
+    source    : /Users/slecuyer/go/src/github.com/samlecuyer/ecumene/data/land_polygons
+    datasource:
+      - file: /Users/slecuyer/go/src/github.com/samlecuyer/ecumene/data/la_osm_shp
+      - query: select name
+

@@ -1,0 +1,15 @@
+[package]
+
+name = "ecumene"
+version = "0.0.1"
+authors = ["Sam L'ecuyer <sam@cateches.is>"]
+
+[dependencies]
+cairo-rs = "0.0.7"
+image = "*"
+gdal = "0.1.1"
+proj = {git = "https://github.com/samlecuyer/rust-proj"}
+geo = "0.0.5"
+yaml-rust = "0.3.0"
+getopts = "0.2"
+cssparser = "0.4.0"
